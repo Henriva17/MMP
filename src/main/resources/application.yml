@@ -8,7 +8,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create   # create  tables on startup, drops on shutdown
+      ddl-auto: update  # create  tables on startup, drops on shutdown
         #update change ddl to update once tables are stable
       #validate | none
     show-sql: true
