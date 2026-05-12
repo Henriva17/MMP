@@ -1,4 +1,6 @@
+package com.henri.MMP.jobapplication.mapper;
 import com.henri.MMP.jobapplication.dto.JobApplicationResponse;
+
 import com.henri.MMP.jobapplication.model.JobApplication;
 
 public final class JobApplicationMapper {

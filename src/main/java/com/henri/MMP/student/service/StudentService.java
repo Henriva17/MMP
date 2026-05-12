@@ -6,7 +6,6 @@ import com.henri.MMP.student.dto.StudentResponse;
 import com.henri.MMP.student.mapper.StudentMapper;
 import com.henri.MMP.student.model.Student;
 import com.henri.MMP.student.repository.StudentRepository;
-
 import com.henri.MMP.user.repository.UserRepository;
 import com.henri.MMP.user.model.User;
 import org.springframework.stereotype.Service;
@@ -27,22 +26,12 @@ public class StudentService {
         this.userRepository = userRepository;
     }
 
-
     public StudentResponse createProfile(Long userId, CreateStudentProfileRequest request) {
-
-    public StudentResponse createNewStudent(Long userId, CreateStudentProfileRequest request) {
-
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new IllegalArgumentException("User not found: " + userId));
 
         if (studentRepository.existsByUser_Id(userId)) {
             throw new IllegalStateException("Student profile already exists for this user.");
-        }
-
-
-        // if the provided email exist if not throw an exception
-        if(!userRepository.existsByEmail(user.getEmail()) ){
-            throw new IllegalStateException("User already exist");
         }
 
         if (user.getRole() != Role.USER) {

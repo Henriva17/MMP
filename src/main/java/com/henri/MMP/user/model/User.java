@@ -104,6 +104,9 @@ public class User {
     public void activate() {
         this.status = Status.ACTIVE;
     }
+    public void pending (){
+        this.status = Status.PENDING;
+    }
 
     public void updateProfilePicture(String profilePicture) {
         this.profilePicture = profilePicture;
