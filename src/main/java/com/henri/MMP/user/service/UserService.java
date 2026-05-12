@@ -7,12 +7,11 @@ import com.henri.MMP.user.dto.UserResponse;
 import com.henri.MMP.user.mapper.UserMapper;
 import com.henri.MMP.user.model.User;
 import com.henri.MMP.user.repository.UserRepository;
-<<<<<<< HEAD
-=======
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
->>>>>>> henridev
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,16 +23,15 @@ public class UserService {
 
     private final UserRepository userRepository;
 
-<<<<<<< HEAD
+
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
-=======
     private final PasswordEncoder passwordEncoder;
 
     public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
->>>>>>> henridev
+
     }
 
     public UserResponse register(RegisterUserRequest request) {
@@ -46,21 +44,16 @@ public class UserService {
         User user = new User(
                 request.fullName(),
                 email,
-<<<<<<< HEAD
+
                 request.password()
-=======
+
                 passwordEncoder.encode(request.password())
->>>>>>> henridev
+
         );
 
         return UserMapper.toResponse(userRepository.save(user));
     }
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> henridev
+    
     @Transactional(readOnly = true)
     public UserResponse getById(Long id) {
         return UserMapper.toResponse(findUserEntityById(id));

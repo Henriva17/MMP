@@ -27,11 +27,11 @@ public class StudentService {
         this.userRepository = userRepository;
     }
 
-<<<<<<< HEAD
+
     public StudentResponse createProfile(Long userId, CreateStudentProfileRequest request) {
-=======
+
     public StudentResponse createNewStudent(Long userId, CreateStudentProfileRequest request) {
->>>>>>> henridev
+
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new IllegalArgumentException("User not found: " + userId));
 
@@ -39,14 +39,12 @@ public class StudentService {
             throw new IllegalStateException("Student profile already exists for this user.");
         }
 
-<<<<<<< HEAD
-=======
+
         // if the provided email exist if not throw an exception
         if(!userRepository.existsByEmail(user.getEmail()) ){
             throw new IllegalStateException("User already exist");
         }
 
->>>>>>> henridev
         if (user.getRole() != Role.USER) {
             throw new IllegalStateException("User already has role: " + user.getRole());
         }

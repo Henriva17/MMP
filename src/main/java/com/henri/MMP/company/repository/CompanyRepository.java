@@ -12,8 +12,6 @@ public interface CompanyRepository extends JpaRepository<Company, Long> {
     Optional<Company> findByUser(User user);
     List<Company> findByDomainOfActivityIgnoreCase(String domainOfActivity);
     List<Company> findByVerificationStatus(VerificationStatus verificationStatus);
-<<<<<<< HEAD
-=======
     Optional<Company> findByUserId(Long userId);
->>>>>>> henridev
+
 }

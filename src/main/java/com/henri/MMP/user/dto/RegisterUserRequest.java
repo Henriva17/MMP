@@ -14,8 +14,8 @@ public record RegisterUserRequest(
         @NotBlank(message = "Password is required")
         String password
 ) {
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> henridev
+
+
+

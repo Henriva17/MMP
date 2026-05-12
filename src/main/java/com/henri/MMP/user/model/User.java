@@ -72,20 +72,20 @@ public class User {
     }
 
     public void promoteToStudent() {
-<<<<<<< HEAD
+
         ensureBaseUser();
-=======
+
         ensureBaseUser();           // Er kijk of een user een andere role hebt anders dan user als er juiste is dan toen een fout
->>>>>>> henridev
+
         this.role = Role.STUDENT;
     }
 
     public void promoteToCompany() {
-<<<<<<< HEAD
+
         ensureBaseUser();
-=======
+
         ensureBaseUser();            // Er kijk of een user een andere role hebt anders dan user als er juiste is dan toen een fout
->>>>>>> henridev
+
         this.role = Role.COMPANY;
     }
 
@@ -117,10 +117,9 @@ public class User {
         this.location = location;
     }
 
-<<<<<<< HEAD
-=======
+
     // Er kijk of een user een andere role hebt anders dan user als er juiste is dan toen een fout
->>>>>>> henridev
+
     private void ensureBaseUser() {
         if (this.role != Role.USER) {
             throw new IllegalStateException("User already has role: " + this.role);

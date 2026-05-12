@@ -1,5 +1,3 @@
-package com.henri.MMP.jobapplication.mapper;
-
 import com.henri.MMP.jobapplication.dto.JobApplicationResponse;
 import com.henri.MMP.jobapplication.model.JobApplication;
 
@@ -15,10 +13,8 @@ public final class JobApplicationMapper {
                 application.getStudent().getUser().getFullName(),
                 application.getJobPosting().getId(),
                 application.getJobPosting().getJobTitle(),
-<<<<<<< HEAD
-=======
                 application.getJobPosting().getCompany().getUser().getFullName(),
->>>>>>> henridev
+
                 application.getApplicationStatus(),
                 application.getMotivationLetter(),
                 application.getAppliedAt(),

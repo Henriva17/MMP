@@ -25,18 +25,6 @@ public final class JobPostingMapper {
                 posting.getCreatedAt(),
                 posting.getUpdatedAt()
 
-<<<<<<< HEAD
-                /*
-                 Company company,
-            String jobTitle,
-            String description,
-            JobType jobType,
-            WorkMode workMode,
-            String location,
-            EducationLevel requiredEducationLevel,
-            LocalDate applicationDeadline*/
-=======
->>>>>>> henridev
         );
     }
 }

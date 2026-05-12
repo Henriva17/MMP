@@ -1,10 +1,7 @@
 package com.henri.MMP.jobapplication.repository;
 
 import com.henri.MMP.Enums.JobApplicationStatus;
-<<<<<<< HEAD
-=======
 import com.henri.MMP.company.model.Company;
->>>>>>> henridev
 import com.henri.MMP.jobapplication.model.JobApplication;
 import com.henri.MMP.jobposting.model.JobPosting;
 import com.henri.MMP.student.model.Student;
@@ -21,9 +18,6 @@ public interface JobApplicationRepository extends JpaRepository<JobApplication, 
     List<JobApplication> findByApplicationStatus(JobApplicationStatus status);
 
     boolean existsByStudent_IdAndJobPosting_Id(Long studentId, Long jobPostingId);
-<<<<<<< HEAD
-=======
 
     List<JobApplication> findByJobPosting_Company(Company company);
->>>>>>> henridev
 }
