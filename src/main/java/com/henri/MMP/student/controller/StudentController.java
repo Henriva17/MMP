@@ -10,7 +10,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Set;
+<<<<<<< HEAD
 
+=======
+@CrossOrigin(origins = "http://localhost:4200")
+>>>>>>> henridev
 @RestController
 @RequestMapping("/api/students")
 public class StudentController {
@@ -27,7 +31,11 @@ public class StudentController {
             @Valid @RequestBody CreateStudentProfileRequest request
     ) {
         return ResponseEntity.status(HttpStatus.CREATED)
+<<<<<<< HEAD
                 .body(studentService.createProfile(userId, request));
+=======
+                .body(studentService.createNewStudent(userId, request));
+>>>>>>> henridev
     }
 
     @GetMapping

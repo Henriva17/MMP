@@ -1,5 +1,10 @@
 package com.henri.MMP.jobapplication.service;
 
+<<<<<<< HEAD
+=======
+import com.henri.MMP.company.model.Company;
+import com.henri.MMP.company.repository.CompanyRepository;
+>>>>>>> henridev
 import com.henri.MMP.jobapplication.dto.ApplyToJobRequest;
 import com.henri.MMP.jobapplication.dto.JobApplicationResponse;
 import com.henri.MMP.jobapplication.mapper.JobApplicationMapper;
@@ -21,15 +26,28 @@ public class JobApplicationService {
     private final JobApplicationRepository jobApplicationRepository;
     private final JobPostingRepository jobPostingRepository;
     private final StudentRepository studentRepository;
+<<<<<<< HEAD
+=======
+    private final CompanyRepository companyRepository;
+>>>>>>> henridev
 
     public JobApplicationService(
             JobApplicationRepository jobApplicationRepository,
             JobPostingRepository jobPostingRepository,
+<<<<<<< HEAD
             StudentRepository studentRepository
+=======
+            StudentRepository studentRepository,
+            CompanyRepository companyRepository
+>>>>>>> henridev
     ) {
         this.jobApplicationRepository = jobApplicationRepository;
         this.jobPostingRepository = jobPostingRepository;
         this.studentRepository = studentRepository;
+<<<<<<< HEAD
+=======
+        this.companyRepository = companyRepository;
+>>>>>>> henridev
     }
 
     public JobApplicationResponse apply(Long studentId, ApplyToJobRequest request) {
@@ -99,6 +117,20 @@ public class JobApplicationService {
     }
 
     @Transactional(readOnly = true)
+<<<<<<< HEAD
+=======
+    public List<JobApplicationResponse> getByCompany(Long companyId) {
+        Company company = companyRepository.findById(companyId)
+                .orElseThrow(() -> new IllegalArgumentException("Company not found: " + companyId));
+
+        return jobApplicationRepository.findByJobPosting_Company(company)
+                .stream()
+                .map(JobApplicationMapper::toResponse)
+                .toList();
+    }
+
+    @Transactional(readOnly = true)
+>>>>>>> henridev
     public JobApplicationResponse getById(Long id) {
         return JobApplicationMapper.toResponse(findApplicationEntityById(id));
     }

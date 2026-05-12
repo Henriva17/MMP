@@ -10,6 +10,10 @@ public record JobApplicationResponse(
         String studentName,
         Long jobPostingId,
         String jobTitle,
+<<<<<<< HEAD
+=======
+        String companyName,
+>>>>>>> henridev
         JobApplicationStatus status,
         String motivationLetter,
         LocalDateTime appliedAt,

@@ -6,7 +6,11 @@ import java.util.Set;
 
 public record StudentResponse(
         Long id,
+<<<<<<< HEAD
         Long userId,
+=======
+        Long userId, //
+>>>>>>> henridev
         String fullName,
         String email,
         String studentMat,

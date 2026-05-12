@@ -63,4 +63,12 @@ public class JobApplicationController {
     public ResponseEntity<List<JobApplicationResponse>> getByJobPosting(@PathVariable Long jobPostingId) {
         return ResponseEntity.ok(jobApplicationService.getByJobPosting(jobPostingId));
     }
+<<<<<<< HEAD
+=======
+    @GetMapping("/companies/{companyId}")
+    public ResponseEntity<List<JobApplicationResponse>> getByCompany(@PathVariable Long companyId) {
+        return ResponseEntity.ok(jobApplicationService.getByCompany(companyId));
+    }
+
+>>>>>>> henridev
 }

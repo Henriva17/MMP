@@ -14,7 +14,11 @@ import java.util.Set;
 public class Student {
 
     @Id
+<<<<<<< HEAD
     @Column(name = "user_id")
+=======
+    @Column(name = "student_id")
+>>>>>>> henridev
     private Long id;
 
     @OneToOne(fetch = FetchType.LAZY, optional = false)

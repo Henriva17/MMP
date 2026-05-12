@@ -25,6 +25,7 @@ public final class JobPostingMapper {
                 posting.getCreatedAt(),
                 posting.getUpdatedAt()
 
+<<<<<<< HEAD
                 /*
                  Company company,
             String jobTitle,
@@ -34,6 +35,8 @@ public final class JobPostingMapper {
             String location,
             EducationLevel requiredEducationLevel,
             LocalDate applicationDeadline*/
+=======
+>>>>>>> henridev
         );
     }
 }

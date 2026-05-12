@@ -15,6 +15,10 @@ public final class JobApplicationMapper {
                 application.getStudent().getUser().getFullName(),
                 application.getJobPosting().getId(),
                 application.getJobPosting().getJobTitle(),
+<<<<<<< HEAD
+=======
+                application.getJobPosting().getCompany().getUser().getFullName(),
+>>>>>>> henridev
                 application.getApplicationStatus(),
                 application.getMotivationLetter(),
                 application.getAppliedAt(),
