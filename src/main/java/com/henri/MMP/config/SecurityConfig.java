@@ -42,7 +42,7 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
 
-        config.setAllowedOrigins(List.of("http://localhost:4200", "http://localhost:5000", "https://mmp-ui-mu.vercel.app"));
+        config.setAllowedOrigins(List.of("http://localhost:4200", "http://localhost:5000", "https://mmp-ui-mu.vercel.app", "https://mmp-5551koq09-henriva17s-projects.vercel.app"));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
