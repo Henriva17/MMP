@@ -45,7 +45,7 @@ public class SecurityConfig {
         // Wildcard approach — allows all vercel.app subdomains
         config.setAllowedOriginPatterns(List.of(
                 "http://localhost:4200",
-                "https://*.vercel.app"
+                "https://mmp-ui-mu.vercel.app"
         ));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
