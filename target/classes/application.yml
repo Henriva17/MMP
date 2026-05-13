@@ -1,40 +1,40 @@
 #spring.application.name=MMP
 
+
+#  datasource:
+#    url: ${SPRING_DATASOURCE_URL}
+#    username: ${SPRING_DATASOURCE_USERNAME}
+#    password: ${SPRING_DATASOURCE_PASSWORD}
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: false
+#    properties:
+#      hibernate:
+#        format_sql: false
+
+
 spring:
   datasource:
-    url: ${SPRING_DATASOURCE_URL}
-    username: ${SPRING_DATASOURCE_USERNAME}
-    password: ${SPRING_DATASOURCE_PASSWORD}
+    url: jdbc:mysql://localhost:3306/MMP_dl
+    username: root
+    password: Tresorhenri17!
     driver-class-name: com.mysql.cj.jdbc.Driver
+
 
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: false
+        # create  tables on startup, drops on shutdown
+       # update change ddl to update once tables are stable
+      #validate | none
+    show-sql: true
     properties:
       hibernate:
-        format_sql: false
+        format_sql: true      #Makes the printed SQL readable
 
-
-
-
-#  datasource:
-#    url: jdbc:mysql://localhost:3306/MMP_dl
-#    username: root
-#    password: Tresorhenri17!
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-
-
-#  jpa:
-#    hibernate:
-#      ddl-auto: update  # create  tables on startup, drops on shutdown
-#        update change ddl to update once tables are stable
-#      validate | none
-#    show-sql: true
-#    properties:
-#      hibernate:
-#        format_sql: true      #Makes the printed SQL readable
-#
-#  sql:
-#    init:
-#      mode: always
+sql:
+   init:
+     mode: always
