@@ -41,7 +41,20 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
+
         config.setAllowedOrigins(List.of("http://localhost:4200", "http://localhost:5000"));
+
+
+        // Wildcard approach — allows all vercel.app subdomains
+        config.setAllowedOriginPatterns(List.of(
+                "http://localhost:4200",
+                "https://mmp-ui-mu.vercel.app",          // your stable production URL
+                "https://*.vercel.app"                   //  preview deployments too
+               /* "https://*.vercel.app",
+                "https://mmp-ui-mu.vercel.app",
+                "https://mmp-ptbivxxvd-henriva17s-projects.vercel.app"*/
+        ));
+
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
